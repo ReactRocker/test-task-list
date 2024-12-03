@@ -1,5 +1,5 @@
 export interface Task {
   id: number;
   name: string;
-  status: string;
+  status: "incomplete" | "complete";
 }

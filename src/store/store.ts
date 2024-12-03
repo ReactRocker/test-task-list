@@ -18,7 +18,7 @@ const rootReducer = combineReducers({
 });
 
 const persistConfig = {
-  key: "root",
+  key: "tasks-list",
   storage,
 };
 
@@ -39,6 +39,6 @@ export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
 
 export const useAppDispatch: () => typeof store.dispatch = useDispatch;
-export const appSelector: TypedUseSelectorHook<
+export const useAppSelector: TypedUseSelectorHook<
   ReturnType<typeof store.getState>
 > = useSelector;
